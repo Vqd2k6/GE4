@@ -999,24 +999,32 @@ h2.slide-heading {
    Part 4: Conclusion Layouts (Slides 7–10)
    ========================================================================== */
 
+.factors-split {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: 28px;
+  flex: 1;
+  min-height: 0;
+  align-items: stretch;
+}
+
 .four-factors-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 1fr;
-  gap: 20px;
-  flex: 1;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(4, 1fr);
+  gap: 12px;
   min-height: 0;
 }
 
 .factor-card {
   background: var(--bg-card);
   border: 1.5px solid var(--border-soft);
-  border-radius: 24px;
-  padding: 24px 28px;
+  border-radius: 20px;
+  padding: 14px 20px;
   box-shadow: var(--shadow-card);
   display: flex;
   align-items: center;
-  gap: 20px;
+  gap: 16px;
 }
 
 .factor-card--blue { border-left: 6px solid var(--accent); }
@@ -1050,6 +1058,24 @@ h2.slide-heading {
   font-weight: 600;
   color: var(--text-secondary);
   line-height: 1.45;
+}
+
+.factors-hub-card {
+  background: linear-gradient(145deg, #ffffff 0%, #eef4ff 100%);
+  border: 1.5px solid var(--border-soft);
+  border-radius: 30px;
+  box-shadow: var(--shadow-card);
+  display: grid;
+  place-items: center;
+  padding: 20px;
+  position: relative;
+  overflow: hidden;
+}
+
+.factors-hub-svg {
+  width: 100%;
+  height: 100%;
+  max-height: 430px;
 }
 
 .thankyou-grid {
