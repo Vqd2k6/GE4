@@ -996,6 +996,77 @@ h2.slide-heading {
 }
 
 /* ==========================================================================
+   Part 4: Conclusion Layouts (Slides 7–10)
+   ========================================================================== */
+
+.four-factors-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 20px;
+  flex: 1;
+  min-height: 0;
+}
+
+.factor-card {
+  background: var(--bg-card);
+  border: 1.5px solid var(--border-soft);
+  border-radius: 24px;
+  padding: 24px 28px;
+  box-shadow: var(--shadow-card);
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.factor-card--blue { border-left: 6px solid var(--accent); }
+.factor-card--teal { border-left: 6px solid var(--teal); }
+.factor-card--coral { border-left: 6px solid var(--coral); }
+.factor-card--amber { border-left: 6px solid var(--amber); }
+
+.factor-icon {
+  width: 60px;
+  height: 60px;
+  border-radius: 18px;
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+}
+
+.factor-icon--blue { background: var(--accent-soft); color: var(--accent-deep); }
+.factor-icon--teal { background: var(--teal-soft); color: #0f766e; }
+.factor-icon--coral { background: var(--coral-soft); color: #e11d48; }
+.factor-icon--amber { background: rgba(245, 158, 11, 0.14); color: #b45309; }
+
+.factor-card h3 {
+  font-family: var(--font-display);
+  font-size: 22px;
+  font-weight: 800;
+  margin-bottom: 4px;
+}
+
+.factor-card p {
+  font-size: 17px;
+  font-weight: 600;
+  color: var(--text-secondary);
+  line-height: 1.45;
+}
+
+.thankyou-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  flex: 1;
+  min-height: 0;
+  align-items: center;
+}
+
+.thankyou-img-frame {
+  height: 480px;
+  width: 100%;
+}
+
+/* ==========================================================================
    Animations & Print
    ========================================================================== */
 
