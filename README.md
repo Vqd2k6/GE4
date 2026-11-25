@@ -26,6 +26,21 @@ nature-vs-nurture-slides/
 
 ---
 
+## Hai phiên bản: Gốc và Cải tiến
+
+| File | Mô tả |
+| :--- | :--- |
+| `index.html` | Bản gốc (18 slide), giữ nguyên nội dung. |
+| `index-v2.html` | Bản cải tiến (19 slide): sửa logic câu chuyện sinh đôi, sửa dẫn chứng sinh đôi, sửa tiếng Anh, chữ to hơn, thanh tiến độ 4 phần, lời thoại đầy đủ cho Người 3 & 4, thêm slide References. CSS riêng ở `css/v2-overrides.css`. |
+
+Chuyển qua lại bằng nút **"✨ New version" / "↩ Original"** ở thanh điều khiển góc dưới phải, hoặc phím **`V`**. Vị trí slide được giữ nguyên (qua `#slide=N` trên URL).
+
+> **Quan trọng – tên người nói:** ô tên sửa trực tiếp trên trang (`contenteditable`) **không được lưu**, reload là mất. Hãy mở `index-v2.html` bằng trình soạn thảo và thay các chữ `[Speaker 1 Name]` … `[Speaker 4 Name]` bằng tên thật (Find & Replace).
+
+Prompt để tạo lại ảnh cho đồng bộ phong cách: xem [`docs/IMAGE_PROMPTS.md`](docs/IMAGE_PROMPTS.md).
+
+---
+
 ## Cách mở và trình chiếu
 
 ### Cách 1: Mở trực tiếp (Nhanh nhất)
@@ -55,6 +70,7 @@ Sau đó mở trình duyệt và truy cập: `http://localhost:8080`
 | `←` | Quay lại slide trước |
 | `N` | Bật / tắt **Speaker Script** (lời thoại tiếng Anh theo từng slide để luyện tập) |
 | `F` | Bật / tắt chế độ toàn màn hình (**Fullscreen**) |
+| `V` | Chuyển giữa bản Gốc và bản Cải tiến |
 | Vuốt trái / phải | Chuyển slide trên màn hình cảm ứng |
 
 ---

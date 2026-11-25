@@ -1,0 +1,310 @@
+/* ==========================================================================
+   v2 overrides — loaded only by index-v2.html, after styles.css.
+   The original deck (index.html) does not use this file.
+   Goals: larger text for classroom projection, one 4-part progress bar,
+   and a few new layouts to break up repetition.
+   ========================================================================== */
+
+/* ---------- 1. Bigger, projector-friendly text ---------- */
+.section-tag { font-size: 15px; }
+h2.slide-heading { font-size: 46px; }
+.lead-text { font-size: 22px; }
+.body-text { font-size: 20px; }
+.pillar-item h3 { font-size: 22px; }
+.pillar-item p { font-size: 19px; color: var(--text-secondary); }
+.pillar-stack { gap: 12px; }
+.pillar-item { padding: 15px 20px; }
+.factor-card h3 { font-size: 23px; }
+.factor-card p { font-size: 19px; }
+.handoff-quote-card { font-size: 23px; }
+.preview-chip { font-size: 16px; }
+.env-pill { font-size: 15px; white-space: nowrap; padding-left: 12px; padding-right: 12px; }
+.same-env-banner { flex-wrap: nowrap; gap: 8px; }
+.next-badge { font-size: 14px; }
+.meta-chip { font-size: 16px; }
+.roadmap-step h3 { font-size: 20px; }
+.roadmap-step p { font-size: 17px; }
+.vs-side p { font-size: 16px; }
+.slide-footer-num { font-size: 15px; }
+.notes-body { font-size: 17px; }
+
+/* Shared helpers that replace old inline styles */
+.shared-label,
+.strip-title,
+.summary-kicker,
+.twin-trait,
+.next-title {
+  font-family: var(--font-display);
+  font-weight: 700;
+}
+.shared-label { font-size: 17px; }
+.twin-trait { font-size: 24px; margin-bottom: 6px; }
+.next-title { font-size: 26px; font-weight: 800; }
+.strip-title { font-size: 19px; }
+.strip-sub { font-size: 17px; color: var(--text-muted); font-weight: 600; }
+.summary-kicker { font-size: 17px; color: var(--accent-deep); margin-bottom: 4px; }
+.bubble-kicker {
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  opacity: 0.85;
+  margin-bottom: 6px;
+}
+.big-question-bubble p { font-size: 23px; }
+
+/* Speaker name chip at the start of each part */
+.speaker-chip {
+  display: inline-block;
+  font-family: var(--font-display);
+  font-size: 15px;
+  font-weight: 700;
+  color: #0f766e;
+  background: var(--teal-soft);
+  padding: 6px 14px;
+  border-radius: 9999px;
+  margin-bottom: 10px;
+}
+
+.up-next-line {
+  font-size: 17px;
+  font-weight: 700;
+  color: var(--text-muted);
+}
+
+/* ---------- 2. One 4-part progress bar instead of per-slide pills ---------- */
+.slide .topic-pills { display: none; }
+
+.part-progress {
+  position: absolute;
+  top: 40px;
+  right: 54px;
+  z-index: 5;
+  display: flex;
+  gap: 6px;
+  background: rgba(255, 255, 255, 0.85);
+  padding: 5px;
+  border-radius: 9999px;
+  box-shadow: var(--shadow-card);
+}
+
+.part-step {
+  font-family: var(--font-display);
+  font-size: 14px;
+  font-weight: 600;
+  padding: 7px 16px;
+  border: none;
+  border-radius: 9999px;
+  background: transparent;
+  color: var(--text-muted);
+  cursor: pointer;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.part-step.is-done { color: var(--accent-deep); }
+
+.part-step.is-active {
+  background: var(--accent);
+  color: #ffffff;
+  box-shadow: 0 6px 16px rgba(77, 141, 255, 0.26);
+}
+
+/* ---------- 3. Slide-specific layouts ---------- */
+
+/* Slide 1: presenter list replaces the duplicated banner image */
+.team-list {
+  display: grid;
+  gap: 8px;
+  background: var(--bg-card);
+  border: 1.5px solid var(--border-soft);
+  border-radius: 22px;
+  padding: 14px 18px;
+  box-shadow: var(--shadow-card);
+}
+.team-row {
+  display: grid;
+  grid-template-columns: 30px 1fr auto;
+  align-items: center;
+  gap: 12px;
+  font-size: 17px;
+  font-weight: 600;
+  color: var(--text-secondary);
+}
+.team-num {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  background: var(--accent-soft);
+  color: var(--accent-deep);
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 14px;
+}
+.team-name { font-weight: 800; color: var(--text-primary); }
+
+/* Slide 3: examples block replaces the repeated cover image */
+.nn-examples { display: grid; gap: 10px; }
+.nn-example {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  padding: 14px 18px;
+  border-radius: 18px;
+  font-size: 17px;
+  font-weight: 600;
+  color: var(--text-secondary);
+}
+.nn-example strong { font-family: var(--font-display); font-size: 18px; }
+.nn-example--blue { background: var(--accent-soft); }
+.nn-example--blue strong { color: var(--accent-deep); }
+.nn-example--teal { background: var(--teal-soft); }
+.nn-example--teal strong { color: #0f766e; }
+
+/* Slide 4: simple "then → now" row replaces the dense table */
+.then-now {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  gap: 12px;
+}
+.then-now-item {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 14px 18px;
+  border-radius: 18px;
+  background: var(--bg-card);
+  border: 1.5px solid var(--border-soft);
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--text-secondary);
+}
+.then-now-item--now { border-color: var(--accent); background: var(--accent-soft); }
+.then-now-label {
+  font-family: var(--font-display);
+  font-size: 14px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--accent-deep);
+}
+.then-now-arrow { font-size: 28px; font-weight: 800; color: var(--accent); }
+
+/* Slide 12: horizontal three-column layout */
+.family-v2 {
+  flex: 1;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+.family-v2-top {
+  flex: 1;
+  min-height: 0;
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  gap: 28px;
+  align-items: center;
+}
+.family-v2-img { height: 100%; }
+.row-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+.row-card {
+  background: var(--bg-card);
+  border: 1.5px solid var(--border-soft);
+  border-radius: 22px;
+  padding: 16px 20px;
+  box-shadow: var(--shadow-card);
+}
+.row-card .pillar-badge { width: 44px; height: 44px; margin-bottom: 8px; }
+.row-card h3 { font-family: var(--font-display); font-size: 21px; font-weight: 700; margin-bottom: 4px; }
+.row-card p { font-size: 18px; font-weight: 600; color: var(--text-secondary); }
+.row-card--teal { border-top: 5px solid var(--teal); }
+.row-card--blue { border-top: 5px solid var(--accent); }
+.row-card--coral { border-top: 5px solid var(--coral); }
+
+/* Slide 15: Genes + Environment = You */
+.plus-accent { color: var(--accent); }
+.equation-row {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr auto 1fr;
+  align-items: center;
+  gap: 10px;
+}
+.eq-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 14px 10px;
+  border-radius: 18px;
+  font-size: 16px;
+  font-weight: 600;
+}
+.eq-box strong { font-family: var(--font-display); font-size: 21px; }
+.eq-box--blue { background: var(--accent-soft); color: var(--accent-deep); }
+.eq-box--teal { background: var(--teal-soft); color: #0f766e; }
+.eq-box--dark { background: var(--accent); color: #ffffff; }
+.eq-op { font-family: var(--font-display); font-size: 28px; font-weight: 800; color: var(--text-muted); }
+
+/* Slide 17: one big statement + image */
+.statement-grid {
+  flex: 1;
+  min-height: 0;
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 36px;
+  align-items: center;
+}
+.statement-left { display: flex; flex-direction: column; gap: 28px; }
+.statement-title {
+  font-family: var(--font-display);
+  font-size: 58px;
+  font-weight: 800;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  color: var(--text-primary);
+}
+.statement-points { list-style: none; display: grid; gap: 14px; padding: 0; margin: 0; }
+.statement-points li {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--text-secondary);
+}
+.dot { width: 14px; height: 14px; border-radius: 50%; flex-shrink: 0; }
+.dot--blue { background: var(--accent); }
+.dot--teal { background: var(--teal); }
+.dot--coral { background: var(--coral); }
+.statement-img { height: 100%; }
+
+/* Slide 18: references */
+.refs-wrap { flex: 1; display: flex; flex-direction: column; gap: 22px; }
+.refs-list {
+  display: grid;
+  gap: 14px;
+  padding: 22px 28px 22px 52px;
+  margin: 0;
+  background: var(--bg-card);
+  border: 1.5px solid var(--border-soft);
+  border-radius: 22px;
+  box-shadow: var(--shadow-card);
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 1.5;
+  color: var(--text-secondary);
+}
+.refs-list li { padding-left: 4px; overflow-wrap: anywhere; }
+
+/* Version switch button */
+.p-btn--version { background: var(--bg-tint); }
+
+@media print {
+  .part-progress { display: none !important; }
+}

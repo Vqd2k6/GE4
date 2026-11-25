@@ -10,6 +10,8 @@
   const notesBody = document.getElementById('notesBody');
   const notesSlideNum = document.getElementById('notesSlideNum');
   const fullscreenBtn = document.getElementById('fullscreenBtn');
+  const versionBtn = document.getElementById('versionBtn');
+  const partSteps = Array.from(document.querySelectorAll('[data-part-goto]'));
 
   let current = 0;
 
@@ -43,9 +45,33 @@
     notesSlideNum.textContent = current + 1;
     notesBody.textContent =
       slides[current].dataset.notes || 'No speaker notes for this slide.';
+
+    // Highlight the current part in the 4-part progress bar (improved version only)
+    const part = slides[current].dataset.part;
+    partSteps.forEach((step) => {
+      step.classList.toggle('is-active', step.dataset.partGoto === part);
+      step.classList.toggle('is-done', Number(step.dataset.partGoto) < Number(part));
+    });
+
+    // Remember the position in the URL so switching versions keeps the same slide
+    history.replaceState(null, '', `#slide=${current + 1}`);
   }
 
-  goToSlide(0);
+  function slideFromHash() {
+    const match = location.hash.match(/slide=(\d+)/);
+    if (!match) return 0;
+    return Math.min(Math.max(Number(match[1]) - 1, 0), slides.length - 1);
+  }
+
+  goToSlide(slideFromHash());
+
+  // Switch between the original deck and the improved deck, keeping the slide number
+  function switchVersion() {
+    if (!versionBtn) return;
+    window.location.href = `${versionBtn.dataset.target}#slide=${current + 1}`;
+  }
+
+  versionBtn?.addEventListener('click', switchVersion);
 
   prevBtn.addEventListener('click', () => goToSlide(current - 1));
   nextBtn.addEventListener('click', () => goToSlide(current + 1));
@@ -71,6 +97,8 @@
       notesDrawer.classList.toggle('open');
     } else if (e.key.toLowerCase() === 'f') {
       toggleFullscreen();
+    } else if (e.key.toLowerCase() === 'v') {
+      switchVersion();
     }
   });
 
