@@ -35,7 +35,7 @@ nature-vs-nurture-slides/
 
 Chuyển qua lại bằng nút **"✨ New version" / "↩ Original"** ở thanh điều khiển góc dưới phải, hoặc phím **`V`**. Vị trí slide được giữ nguyên (qua `#slide=N` trên URL).
 
-> **Quan trọng – tên người nói:** ô tên sửa trực tiếp trên trang (`contenteditable`) **không được lưu**, reload là mất. Hãy mở `index-v2.html` bằng trình soạn thảo và thay các chữ `[Speaker 1 Name]` … `[Speaker 4 Name]` bằng tên thật (Find & Replace).
+> **Tên người nói:** chỉ hiển thị ở slide bìa của `index-v2.html`; các slide bên trong không ghi tên — việc chuyển người nói được thực hiện bằng lời khi chuyển mic.
 
 Prompt để tạo lại ảnh cho đồng bộ phong cách: xem [`docs/IMAGE_PROMPTS.md`](docs/IMAGE_PROMPTS.md).
 
