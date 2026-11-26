@@ -31,7 +31,7 @@ nature-vs-nurture-slides/
 | File | Mô tả |
 | :--- | :--- |
 | `index.html` | Bản gốc (18 slide), giữ nguyên nội dung. |
-| `index-v2.html` | Bản cải tiến (19 slide): sửa logic câu chuyện sinh đôi, sửa dẫn chứng sinh đôi, sửa tiếng Anh, chữ to hơn, thanh tiến độ 4 phần, lời thoại đầy đủ cho Người 3 & 4, thêm slide References. CSS riêng ở `css/v2-overrides.css`. |
+| `index-v2.html` | Bản cải tiến (18 slide): sửa logic câu chuyện sinh đôi, sửa dẫn chứng sinh đôi, sửa tiếng Anh, chữ to hơn, thanh tiến độ 4 phần, lời thoại đầy đủ cho Người 3 & 4. CSS riêng ở `css/v2-overrides.css`. |
 
 Chuyển qua lại bằng nút **"✨ New version" / "↩ Original"** ở thanh điều khiển góc dưới phải, hoặc phím **`V`**. Vị trí slide được giữ nguyên (qua `#slide=N` trên URL).
 

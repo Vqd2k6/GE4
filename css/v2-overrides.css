@@ -284,24 +284,6 @@ h2.slide-heading { font-size: 46px; }
 .dot--coral { background: var(--coral); }
 .statement-img { height: 100%; }
 
-/* Slide 18: references */
-.refs-wrap { flex: 1; display: flex; flex-direction: column; gap: 22px; }
-.refs-list {
-  display: grid;
-  gap: 14px;
-  padding: 22px 28px 22px 52px;
-  margin: 0;
-  background: var(--bg-card);
-  border: 1.5px solid var(--border-soft);
-  border-radius: 22px;
-  box-shadow: var(--shadow-card);
-  font-size: 20px;
-  font-weight: 600;
-  line-height: 1.5;
-  color: var(--text-secondary);
-}
-.refs-list li { padding-left: 4px; overflow-wrap: anywhere; }
-
 /* Version switch button */
 .p-btn--version { background: var(--bg-tint); }
 
