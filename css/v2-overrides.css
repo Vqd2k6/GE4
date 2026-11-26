@@ -290,3 +290,44 @@ h2.slide-heading { font-size: 46px; }
 @media print {
   .part-progress { display: none !important; }
 }
+
+/* Slide 18: audience discussion questions */
+.discuss-wrap { flex: 1; min-height: 0; display: flex; flex-direction: column; gap: 26px; }
+.discuss-wrap .lead-text { margin-top: 8px; }
+.discuss-cards { flex: 1; min-height: 0; display: grid; grid-template-columns: 1fr 1fr; gap: 28px; }
+.discuss-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 18px;
+  padding: 32px 36px;
+  background: var(--bg-card);
+  border: 1.5px solid var(--border-soft);
+  border-radius: 28px;
+  box-shadow: var(--shadow-card);
+}
+.discuss-card--blue { border-top: 6px solid var(--accent); }
+.discuss-card--teal { border-top: 6px solid var(--teal); }
+.discuss-num {
+  position: absolute;
+  top: 24px;
+  right: 28px;
+  font-family: var(--font-display);
+  font-size: 44px;
+  font-weight: 800;
+  color: var(--accent);
+  opacity: 0.18;
+}
+.discuss-num--teal { color: var(--teal); }
+.discuss-icon { width: 68px; height: 68px; border-radius: 20px; display: grid; place-items: center; }
+.discuss-icon--blue { background: var(--accent-soft); color: var(--accent-deep); }
+.discuss-icon--teal { background: var(--teal-soft); color: #0f766e; }
+.discuss-q {
+  font-family: var(--font-display);
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 1.3;
+  color: var(--text-primary);
+}
+.teal-strong { color: #0f766e; font-weight: 800; }
