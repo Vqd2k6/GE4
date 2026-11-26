@@ -331,3 +331,47 @@ h2.slide-heading { font-size: 46px; }
   color: var(--text-primary);
 }
 .teal-strong { color: #0f766e; font-weight: 800; }
+
+/* Slide 18 v2 refinements: fuller cards, hint chips, footer */
+.discuss-wrap { gap: 20px; }
+.discuss-cards { gap: 24px; }
+.discuss-card { justify-content: flex-start; gap: 16px; padding: 28px 32px; }
+.discuss-link {
+  align-self: flex-start;
+  font-family: var(--font-display);
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  padding: 6px 14px;
+  border-radius: 9999px;
+}
+.discuss-link--blue { background: var(--accent-soft); color: var(--accent-deep); }
+.discuss-link--teal { background: var(--teal-soft); color: #0f766e; }
+.discuss-q { font-size: 30px; }
+.discuss-hints { display: flex; flex-wrap: wrap; gap: 10px; margin-top: auto; }
+.discuss-hint {
+  font-size: 18px;
+  font-weight: 700;
+  padding: 8px 18px;
+  border-radius: 9999px;
+  border: 2px dashed var(--accent);
+  color: var(--accent-deep);
+  background: #ffffff;
+}
+.discuss-hint--teal { border-color: var(--teal); color: #0f766e; }
+.discuss-icon { width: 60px; height: 60px; }
+.discuss-footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  padding: 14px 24px;
+  border-radius: 9999px;
+  background: linear-gradient(90deg, var(--accent-deep), var(--teal));
+  color: #ffffff;
+  font-size: 20px;
+  font-weight: 600;
+  box-shadow: var(--shadow-accent);
+}
+.discuss-footer-icon { font-size: 24px; }
